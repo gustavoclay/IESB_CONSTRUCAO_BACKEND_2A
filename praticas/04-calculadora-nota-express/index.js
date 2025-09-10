@@ -3,6 +3,12 @@ const express = require('express')
 // crio uma instância do express
 const app = express()
 
+// importar o lib cors
+const cors = require('cors')
+// Desabilita a configuração de cors
+// Habilida o browser para mandar requisição pro seu bakcend local
+app.use(cors())
+
 // Middlewares (Intermediários)
 // Intermediário de log
 app.use((req, res, next) => {
